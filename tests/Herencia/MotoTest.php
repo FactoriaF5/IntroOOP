@@ -7,9 +7,10 @@ use App\Herencia\Moto;
 
 
 
-class MotoTest extends TestCase {
+class MotoTest extends TestCase
+{
 
-	public function test_moto_have_2_wheels() 
+	public function test_moto_have_2_wheels()
 	{
 		$myMoto = new Moto();
 
@@ -17,16 +18,13 @@ class MotoTest extends TestCase {
 		$this->assertEquals(2, $result);
 	}
 
-	public function test_moto_can_accelerate() 
+	public function test_moto_can_accelerate()
 	{
 		$myMoto = new Moto();
-		
+
 		$myMoto->accelerate(40);
 
-		$result = $myMoto->velocity;
+		$result = $myMoto->getVelocity();
 		$this->assertEquals(40, $result);
 	}
-
 }
-
-
